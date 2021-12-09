@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.pruebanavigation.inicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_lectura_DatosFragment"
+            app:destination="@id/lectura_DatosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lectura_DatosFragment"
+        android:name="com.example.pruebanavigation.Lectura_DatosFragment"
+        android:label="fragment_lectura__datos"
+        tools:layout="@layout/fragment_lectura__datos" >
+        <argument
+            android:name="puntajeFinalHumano"
+            app:argType="string"
+            android:defaultValue="No_selecciono" />
+        <argument
+            android:name="puntajeFinalCompu"
+            app:argType="string"
+            android:defaultValue="Indeterminado" />
+
+        <action
+            android:id="@+id/action_lectura_DatosFragment_to_resultadoFragment"
+            app:destination="@id/resultadoFragment"
+            app:popUpTo="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="com.example.pruebanavigation.ResultadoFragment"
+        android:label="fragment_resultado"
+        tools:layout="@layout/fragment_resultado" >
+        <argument
+            android:name="opcionHumano"
+            app:argType="string"
+            android:defaultValue="No_selecciono" />
+        <argument
+            android:name="condicion"
+            app:argType="string"
+            android:defaultValue="Indeterminado" />
+        <argument
+            android:name="puntajeJugador"
+            app:argType="string"
+             />
+        <argument
+            android:name="puntajeComp"
+            app:argType="string"
+
+             />
+        <argument
+            android:name="seleComp"
+            app:argType="string"
+            android:defaultValue="No_selecciono"
+            />
+        <action
+            android:id="@+id/action_resultadoFragment_to_lectura_DatosFragment"
+            app:destination="@id/lectura_DatosFragment" />
+        <action
+            android:id="@+id/action_resultadoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+</navigation>

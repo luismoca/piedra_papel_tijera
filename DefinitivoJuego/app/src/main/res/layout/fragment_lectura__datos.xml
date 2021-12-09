@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    tools:context=".Lectura_DatosFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:padding="16dp"
+       android:gravity="center"
+       android:orientation="vertical">
+       <EditText
+           android:id="@+id/txtOpcion"
+           android:layout_width="match_parent"
+           android:layout_height="35dp"
+           android:textSize="20sp"
+           android:hint="Elija entre (piedra ,papel o tijera)"
+           android:textStyle="bold"
+           android:backgroundTint="@color/white"
+           android:background="@color/teal_200"
+           android:inputType="textMultiLine"/>
+       <Button
+           android:id="@+id/btnsiguiente"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Yo te elijo "
+           android:layout_marginTop="20dp"/>
+
+
+
+
+   </LinearLayout>
+</FrameLayout>
